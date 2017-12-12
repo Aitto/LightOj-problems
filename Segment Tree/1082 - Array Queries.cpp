@@ -4,13 +4,8 @@ CSE@Buet
 */
 #include<stdio.h>
 #include<iostream>
-//#include<ctime>
-//#include<cmath>
-//#//include<cstdlib>
 #include<algorithm>
-//#include<stack>
-//#include<cstring>
-//#include<bits/stdc++.h>
+
 
 #define lli long long int
 #define pf printf
@@ -58,9 +53,7 @@ int query(int *segmentTree,int qlow,int qhigh,int low,int high,int pos){
 
     int a=query(segmentTree,qlow,qhigh,low,mid,2*pos), b=query(segmentTree,qlow,qhigh,mid +1,high,2*pos +1);
     return a<b?a:b;
-
 }
-
 
 int main()
 {
@@ -88,7 +81,6 @@ int main()
         free(segmentTree);
         free(arr);
     }
-
 
     return 0;
 }
